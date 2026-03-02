@@ -1,0 +1,19 @@
+# Claude Code 相关文件
+.claude/
+
+# 输出文件和报告
+output/
+
+# Kafka 源码目录
+kafka/
+
+# 脚本文件
+final_check.sh
+
+# 其他临时文件
+*.tmp
+*.bak
+*.swp
+*~
+.DS_Store
+Thumbs.db
