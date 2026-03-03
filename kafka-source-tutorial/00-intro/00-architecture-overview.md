@@ -574,16 +574,12 @@ Kafka 的架构设计体现了以下原则:
 ```mermaid
 sequenceDiagram
     participant App as 应用程序
-    thread "Producer 线程"
-        participant Serializer as 序列化器
-        participant Partitioner as 分区器
-        participant Accumulator as 消息累加器
-        participant RecordBatch as RecordBatch
-    end
-    thread "Sender 线程"
-        participant Client as NetworkClient
-        participant Network as 网络层
-    end
+    participant Serializer as 序列化器
+    participant Partitioner as 分区器
+    participant Accumulator as 消息累加器
+    participant RecordBatch as RecordBatch
+    participant Client as NetworkClient
+    participant Network as 网络层
     participant Broker as Kafka Broker
     participant Log as 日志系统
 
@@ -592,7 +588,7 @@ sequenceDiagram
     Serializer->>Partitioner: 3. 计算分区
     Partitioner-->>Serializer: 返回分区号
 
-    Serializer->>Accumulator: 4. 添加到缓冲区
+    Serializer->>Accumulator: 4. 添加到缓冲区<br/>(Producer 线程)
     Note over Accumulator: 按 Topic-Partition 分组<br/>放入对应的双端队列
 
     alt batch 满或超时
@@ -611,7 +607,7 @@ sequenceDiagram
     Log-->>Broker: 12. 返回 LogAppendInfo
 
     Broker-->>Network: 13. ProduceResponse
-    Network-->>Client: 14. 接收响应
+    Network-->>Client: 14. 接收响应<br/>(Sender 线程)
     Client->>App: 15. 回调通知
 ```
 
@@ -640,14 +636,10 @@ sequenceDiagram
 ```mermaid
 sequenceDiagram
     participant App as 应用程序
-    thread "Consumer 线程"
-        participant Fetcher as Fetcher
-        participant Consumer as KafkaConsumer
-        participant Deserializer as 反序列化器
-    end
-    thread "Heartbeat 线程"
-        participant Heartbeat as HeartbeatThread
-    end
+    participant Consumer as KafkaConsumer
+    participant Fetcher as Fetcher
+    participant Deserializer as 反序列化器
+    participant Heartbeat as HeartbeatThread
     participant Broker as Kafka Broker
     participant Coordinator as GroupCoordinator
 
@@ -657,7 +649,7 @@ sequenceDiagram
     Coordinator-->>Broker: 返回分区分配
     Broker-->>Consumer: 3. 返回分配的分区
 
-    Heartbeat->>Coordinator: 定期发送心跳
+    Heartbeat->>Coordinator: 定期发送心跳<br/>(Heartbeat 线程)
     Coordinator-->>Heartbeat: 心跳响应
 
     Consumer->>Fetcher: 4. poll() 调用
@@ -713,7 +705,6 @@ stateDiagram-v2
     SyncGroupSent --> Stable: 收到分区分配
 
     Stable --> Rebalancing: 触发 Rebalance
-    Note over Rebalancing: 成员变化/订阅变化/心跳超时
 
     Rebalancing --> Joining: 重新加入组
     Stable --> [*]: 消费者关闭

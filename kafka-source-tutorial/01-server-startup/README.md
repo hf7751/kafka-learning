@@ -6,73 +6,34 @@
 
 ## 文档目录
 
-### 第一部分：启动流程 (核心必读)
-
 | 文档 | 内容 | 预计阅读时间 |
 |------|------|-------------|
 | [01-startup-overview.md](./01-startup-overview.md) | 启动流程概述、入口点分析 | 20 分钟 |
-| [02-kafkaserver-initialization.md](./02-kafkaserver-initialization.md) | KafkaServer 初始化详解 | 30 分钟 |
-| [03-raft-server-startup.md](./03-raft-server-startup.md) | KafkaRaftServer 启动流程 | 25 分钟 |
-| [04-shared-server.md](./04-shared-server.md) | SharedServer 共享组件 | 20 分钟 |
-
-### 第二部分：核心组件初始化 (深入理解)
-
-| 文档 | 内容 | 预计阅读时间 |
-|------|------|-------------|
-| [05-socket-server-startup.md](./05-socket-server-startup.md) | SocketServer 初始化 | 25 分钟 |
-| [06-log-manager-startup.md](./06-log-manager-startup.md) | LogManager 初始化 | 30 分钟 |
-| [07-replica-manager-startup.md](./07-replica-manager-startup.md) | ReplicaManager 初始化 | 25 分钟 |
-| [08-component-lifecycle.md](./08-component-lifecycle.md) | 组件生命周期管理 | 20 分钟 |
-
-### 第三部分：实战操作 (运维指南)
-
-| 文档 | 内容 | 预计阅读时间 |
-|------|------|-------------|
-| [09-startup-operations.md](./09-startup-operations.md) | 启动相关操作命令 | 30 分钟 |
-| [10-startup-troubleshooting.md](./10-startup-troubleshooting.md) | 启动故障排查 | 35 分钟 |
+| [01-kafkaserver-startup.md](./01-kafkaserver-startup.md) | KafkaServer 启动流程详解 | 30 分钟 |
 | [11-startup-config.md](./11-startup-config.md) | 启动配置详解 | 25 分钟 |
-| [12-startup-tuning.md](./12-startup-tuning.md) | 启动性能调优 | 20 分钟 |
-| [13-startup-faq.md](./13-startup-faq.md) | 常见问题解答 | 15 分钟 |
 
 ## 学习路径建议
 
-### 路径一：快速了解 (30分钟)
+### 快速了解 (30分钟)
 ```
 1. 启动流程概述 (01-startup-overview.md)
 2. 启动配置详解 (11-startup-config.md)
-3. 常见问题 (13-startup-faq.md)
 ```
 
-### 路径二：深入理解 (2小时)
+### 深入理解 (1小时)
 ```
 1. 启动流程概述
-2. KafkaServer 初始化
-3. RaftServer 启动
-4. 核心组件初始化
-5. 组件生命周期
-```
-
-### 路径三：运维专项 (1小时)
-```
-1. 启动配置详解
-2. 启动操作命令
-3. 启动故障排查
-4. 启动性能调优
-```
-
-### 路径四：完整学习 (半天)
-```
-第一部分 + 第二部分 + 第三部分 (全部文档)
+2. KafkaServer 启动流程
+3. 启动配置详解
 ```
 
 ## 核心概念速查
 
 | 概念 | 说明 | 相关文档 |
 |------|------|----------|
-| **KafkaRaftServer** | KRaft 模式的服务器入口 | 03-raft-server-startup.md |
-| **SharedServer** | Broker 和 Controller 共享的组件 | 04-shared-server.md |
-| **BrokerServer** | Broker 角色的服务器 | 02-kafkaserver-initialization.md |
-| **ControllerServer** | Controller 角色的服务器 | 03-raft-server-startup.md |
+| **KafkaRaftServer** | KRaft 模式的服务器入口 | 01-kafkaserver-startup.md |
+| **BrokerServer** | Broker 角色的服务器 | 01-kafkaserver-startup.md |
+| **ControllerServer** | Controller 角色的服务器 | 01-kafkaserver-startup.md |
 | **meta.properties** | 存储节点 ID 和集群 ID 的文件 | 01-startup-overview.md |
 | **process.roles** | 定义节点角色 (broker/controller) | 11-startup-config.md |
 

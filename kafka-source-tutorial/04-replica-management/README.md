@@ -147,8 +147,7 @@ Producer 确认: acks=all 时等待 ISR 确认
 
 - **[03. 日志存储](../03-log-storage/)**: 日志段文件管理
 - **[05. Controller 控制器](../05-controller/)**: 分区 Leader 选举协调
-- **[06. 网络层](../06-network/)**: 请求处理与网络通信
-- **[07. 协调器](../07-coordinator/)**: 消费组与事务协调
+- **[06. GroupCoordinator 协调器](../06-coordinator/)**: 消费组协调
 
 ## 参考资源
 
@@ -163,5 +162,5 @@ Producer 确认: acks=all 时等待 ISR 确认
 
 ---
 
-**上一章**: [03. 日志存储](../03-log-storage/)
-**下一章**: [05. Controller 控制器](../05-controller/)
+**上一章**: [03. 日志存储](../03-log-storage/README.md)
+**下一章**: [05. Controller 控制器](../05-controller/README.md)

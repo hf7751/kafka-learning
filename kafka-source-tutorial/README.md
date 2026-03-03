@@ -88,11 +88,12 @@
 
 ## 📊 教程统计
 
-- **总字数**: 约 120,000+ 字
-- **章节数**: 11 个完整章节
-- **代码示例**: 200+ 段源码分析
-- **流程图**: 60+ 个 Mermaid 图表
-- **核心设计**: 30+ 个设计亮点总结
+- **总字数**: 约 150,000+ 字
+- **章节数**: 8 个完整章节
+- **文档数**: 87 个 Markdown 文件
+- **代码示例**: 300+ 段源码分析
+- **流程图**: 70+ 个 Mermaid 图表
+- **核心设计**: 40+ 个设计亮点总结
 
 ## 🏆 Kafka 核心设计亮点
 
@@ -408,20 +409,6 @@ Broker → 检测需要 Controller 处理
 
 ---
 
-## 📖 待完成章节
-
-### 第七部分：事务支持
-- ⏳ TransactionCoordinator 事务协调器
-- ⏳ 两阶段提交协议
-- ⏳ 幂等生产者实现
-
-### 第八部分：高级特性
-- ⏳ Kafka Streams 原理
-- ⏳ Kafka Connect 架构
-- ⏳ 镜像机制 (MirrorMaker2)
-
----
-
 ## 🔑 核心设计原则
 
 1. **性能优先**
@@ -449,7 +436,7 @@ Broker → 检测需要 Controller 处理
 
 如果你想深入理解 Kafka KRaft 架构背后的 Raft 协议，可以阅读：
 
-- **[Raft 协议通俗指南](../raft-protocol-explained.md)** ⭐⭐⭐
+- **[Raft 协议通俗指南](./08-other/raft-protocol-explained.md)**
   - 用通俗易懂的方式解释 Raft 协议
   - 包含大量类比和图示
   - 适合初学者理解分布式一致性
@@ -481,8 +468,6 @@ export KAFKA_OPTS="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address
 
 ---
 
-**最后更新**: 2026-03-01
-
-**作者**: Claude Code
+**最后更新**: 2026-03-02
 
 **贡献**: 欢迎提交 PR 改进教程

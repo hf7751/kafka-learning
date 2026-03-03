@@ -17,3 +17,7 @@ final_check.sh
 *~
 .DS_Store
 Thumbs.db
+
+#.qoder 相关文件
+
+.qoder/

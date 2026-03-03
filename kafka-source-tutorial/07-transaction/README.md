@@ -112,13 +112,13 @@ Kafka 的事务机制是实现 Exactly-Once 语义的核心功能。本章将深
 - Kafka 基本概念（Topic、Partition、Offset）
 - 生产者和消费者基本使用
 - 副本机制和 ISR
-- [GroupCoordinator](../06-group-coordinator/) 原理
+- [GroupCoordinator](../06-coordinator/README.md) 原理
 
 ## 相关章节
 
-- [06-GroupCoordinator](../06-group-coordinator/) - 消费者组协调机制
-- [05-Controller](../05-controller/) - Controller 元数据管理
-- [04-ReplicaManager](../04-replica-manager/) - 副本管理机制
+- [06-GroupCoordinator](../06-coordinator/README.md) - 消费者组协调机制
+- [05-Controller](../05-controller/README.md) - Controller 元数据管理
+- [04-ReplicaManager](../04-replica-management/README.md) - 副本管理机制
 
 ## 实践建议
 

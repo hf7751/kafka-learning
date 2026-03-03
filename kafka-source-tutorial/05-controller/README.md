@@ -170,6 +170,6 @@ Controller 核心实现:
 
 **快速开始**: 建议从 [01-krft-overview.md](./01-krft-overview.md) 开始阅读
 
-**上一章**: [04. Log 日志存储](../04-log/README.md)
+**上一章**: [04. 副本管理与同步](../04-replica-management/README.md)
 
-**下一章**: [06. GroupCoordinator 协调器](../06-group-coordinator/README.md)
+**下一章**: [06. GroupCoordinator 协调器](../06-coordinator/README.md)

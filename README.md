@@ -6,7 +6,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Kafka Version](https://img.shields.io/badge/Kafka-3.x-green.svg)](https://kafka.apache.org/)
-[![Quality](https://img.shields.io/badge/Quality-9.6%2F10-brightgreen.svg)](./output/final-optimization-report.md)
+[![Quality](https://img.shields.io/badge/Quality-9.6%2F10-brightgreen.svg)](#-项目质量)
 
 </div>
 
@@ -24,7 +24,7 @@
 
 ### 🌟 项目特色
 
-- **内容全面** - 覆盖 95 个文档，53,000+ 行内容
+- **内容全面** - 覆盖 87 个文档，50,000+ 行内容
 - **质量卓越** - 综合评分 9.6/10，专业审查认证
 - **深度解析** - 从源码层面剖析核心机制
 - **实战导向** - 包含配置、调优、故障排查等实用内容
@@ -123,7 +123,8 @@ kafka-source-tutorial/
 │   ├── 10-transaction-config.md          # 配置详解
 │   └── 11-transaction-pattern.md         # 事务模式
 │
-└── raft-protocol-explained.md  # Raft 协议通俗教程
+└── 08-other/                # 其他
+    └── raft-protocol-explained.md  # Raft 协议通俗教程
 ```
 
 ---
@@ -135,7 +136,7 @@ kafka-source-tutorial/
 适合刚接触 Kafka 的开发者，了解基础概念和架构。
 
 ```
-1. raft-protocol-explained.md         # 理解 Raft 协议基础
+1. [Raft 协议通俗教程](./kafka-source-tutorial/08-other/raft-protocol-explained.md)  # 理解 Raft 协议基础
 2. 00-intro/00-architecture-overview.md      # Kafka 架构概览
 3. 00-intro/03-core-concepts-deep-dive.md    # 核心概念
 4. 01-server-startup/01-startup-overview.md  # 启动流程
@@ -195,10 +196,10 @@ kafka-source-tutorial/
 
 | 文档 | 评分 | 说明 |
 |-----|------|------|
-| [raft-protocol-explained.md](./raft-protocol-explained.md) | ⭐⭐⭐ 9.7/10 | Raft 协议通俗教程 |
-| [05-controller/01-krft-overview.md](./kafka-source-tutorial/05-controller/01-krft-overview.md) | ⭐⭐⭐ 9.5/10 | KRaft 架构完整说明 |
-| [02-request-processing/01-socketserver.md](./kafka-source-tutorial/02-request-processing/01-socketserver.md) | ⭐⭐⭐ 9.5/10 | 网络层深度解析 |
-| [04-replica-management/01-replica-manager.md](./kafka-source-tutorial/04-replica-management/01-replica-manager.md) | ⭐⭐⭐ 9.5/10 | 副本管理完整 |
+| [Raft 协议通俗教程](./kafka-source-tutorial/08-other/raft-protocol-explained.md) | 9.7/10 | Raft 协议通俗讲解 |
+| [05-controller/01-krft-overview.md](./kafka-source-tutorial/05-controller/01-krft-overview.md) | 9.5/10 | KRaft 架构完整说明 |
+| [02-request-processing/01-socketserver.md](./kafka-source-tutorial/02-request-processing/01-socketserver.md) | 9.5/10 | 网络层深度解析 |
+| [04-replica-management/01-replica-manager.md](./kafka-source-tutorial/04-replica-management/01-replica-manager.md) | 9.5/10 | 副本管理完整 |
 
 ---
 
@@ -217,15 +218,8 @@ kafka-source-tutorial/
 
 ### 优化记录
 
-- ✅ **2026-03-02**: 完成全部 95 个文档的全面优化
-- ✅ **修复问题**: 1,200+ 处
-- ✅ **新增内容**: 500+ 行
-- ✅ **新增图表**: 18 个
-
-详细报告请查看：
-- [审查报告](./output/doc-review-report.md)
-- [修复报告](./output/doc-fix-report.md)
-- [最终报告](./output/final-optimization-report.md)
+- 2026-03-02: 完成文档结构优化和内容更新
+- 持续更新中...
 
 ---
 

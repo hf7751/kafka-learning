@@ -6,74 +6,35 @@
 
 ## 文档目录
 
-### 第一部分：网络层架构 (基础必读)
-
 | 文档 | 内容 | 预计阅读时间 |
 |------|------|-------------|
-| [01-socketserver-overview.md](./01-socketserver-overview.md) | SocketServer 架构概述 | 25 分钟 |
-| [02-acceptor-threads.md](./02-acceptor-threads.md) | Acceptor 线程模型详解 | 20 分钟 |
-| [03-network-threads.md](./03-network-threads.md) | Processor 网络线程模型 | 30 分钟 |
-| [04-request-channel.md](./04-request-channel.md) | RequestChannel 请求通道 | 25 分钟 |
-
-### 第二部分：请求处理 (深入理解)
-
-| 文档 | 内容 | 预计阅读时间 |
-|------|------|-------------|
-| [05-handler-overview.md](./05-handler-overview.md) | 请求处理概述 | 20 分钟 |
-| [06-kafkaapis-handler.md](./06-kafkaapis-handler.md) | KafkaApis 详解 | 45 分钟 |
-| [07-handler-thread-pool.md](./07-handler-thread-pool.md) | Handler 线程池机制 | 25 分钟 |
-| [08-response-sending.md](./08-response-sending.md) | 响应发送机制 | 20 分钟 |
-
-### 第三部分：实战优化 (运维指南)
-
-| 文档 | 内容 | 预计阅读时间 |
-|------|------|-------------|
-| [09-request-metrics.md](./09-request-metrics.md) | 请求指标监控 | 30 分钟 |
-| [10-handler-optimization.md](./10-handler-optimization.md) | 性能优化技巧 | 35 分钟 |
-| [11-network-troubleshooting.md](./11-network-troubleshooting.md) | 网络故障排查 | 30 分钟 |
-| [12-request-config.md](./12-request-config.md) | 网络配置详解 | 25 分钟 |
-| [13-request-faq.md](./13-request-faq.md) | 常见问题解答 | 15 分钟 |
+| [01-socketserver.md](./01-socketserver.md) | SocketServer 网络层深度解析 | 45 分钟 |
+| [02-request-handler.md](./02-request-handler.md) | KafkaApis 请求处理架构 | 40 分钟 |
 
 ## 学习路径建议
 
-### 路径一：快速了解（30分钟）
+### 快速了解 (30分钟)
 ```
-1. SocketServer 架构概述
-2. 请求处理概述
-3. 性能优化技巧
-4. 常见问题
+1. SocketServer 网络层解析
+2. KafkaApis 请求处理
 ```
 
-### 路径二：深入理解（3小时）
+### 深入理解 (1.5小时)
 ```
-第一部分全部（网络层架构）
-第二部分全部（请求处理）
-```
-
-### 路径三：运维专项（2小时）
-```
-1. SocketServer 架构概述
-2. KafkaApis 详解
-3. 请求指标监控
-4. 性能优化技巧
-5. 网络故障排查
-```
-
-### 路径四：完整学习（半天）
-```
-第一部分 + 第二部分 + 第三部分（全部文档）
+1. SocketServer 网络层解析 - 理解 Reactor 模式
+2. KafkaApis 请求处理 - 理解请求路由机制
 ```
 
 ## 核心概念速查
 
 | 概念 | 说明 | 相关文档 |
 |------|------|----------|
-| **SocketServer** | 网络层核心组件 | 01-socketserver-overview.md |
-| **Acceptor** | 接收新连接的线程 | 02-acceptor-threads.md |
-| **Processor** | 处理网络 I/O 的线程 | 03-network-threads.md |
-| **RequestChannel** | 请求队列和响应通道 | 04-request-channel.md |
-| **KafkaApis** | API 请求处理中心 | 06-kafkaapis-handler.md |
-| **Handler Pool** | 请求处理线程池 | 07-handler-thread-pool.md |
+| **SocketServer** | 网络层核心组件 | 01-socketserver.md |
+| **Acceptor** | 接收新连接的线程 | 01-socketserver.md |
+| **Processor** | 处理网络 I/O 的线程 | 01-socketserver.md |
+| **RequestChannel** | 请求队列和响应通道 | 01-socketserver.md |
+| **KafkaApis** | API 请求处理中心 | 02-request-handler.md |
+| **Handler Pool** | 请求处理线程池 | 02-request-handler.md |
 
 ## 请求处理流程速查
 
@@ -186,7 +147,7 @@
 | `connections.max.idle.ms` | 600000 | 空闲连接超时 |
 | `max.connections.per.ip` | ∞ | 单IP最大连接数 |
 
-更多配置参数请参考：[12-request-config.md](./12-request-config.md)
+详细配置参数请参考文档内容。
 
 ## 版本说明
 
@@ -201,4 +162,4 @@
 
 ---
 
-**快速开始**：建议从 [01-socketserver-overview.md](./01-socketserver-overview.md) 开始阅读
+**快速开始**：建议从 [01-socketserver.md](./01-socketserver.md) 开始阅读
