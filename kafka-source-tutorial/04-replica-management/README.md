@@ -19,48 +19,56 @@
   - Leader Epoch 机制
   - 选举实战案例
 
-- **[03. 副本拉取机制](./03-replica-fetcher.md)**
+- **[03. 副本同步深度解析](./03-replica-sync-deep-dive.md)**
+  - 副本管理全景
+  - ISR 机制详解
+  - 副本同步流程
+  - HW 管理
+  - Leader 选举原理
+  - 故障处理
+
+- **[04. 副本拉取机制](./04-replica-fetcher.md)**
   - ReplicaFetcherThread 架构
   - 拉取请求构建
   - 副本同步流程
   - 拉取性能优化
   - 故障处理与重试
 
-- **[04. 副本状态机](./04-replica-state.md)**
+- **[05. 副本状态机](./05-replica-state.md)**
   - 副本状态定义
   - 状态转换规则
   - Online/Offline 状态
   - 状态持久化与恢复
 
-- **[05. 副本同步与 ISR](./05-replica-sync.md)**
+- **[06. 副本同步与 ISR](./06-replica-sync.md)**
   - ISR 机制详解
   - LEO 与 HW 管理
   - ISR 扩展与收缩
   - 数据一致性保障
   - 同步性能调优
 
-- **[06. 副本操作](./06-replica-operations.md)**
+- **[07. 副本操作](./07-replica-operations.md)**
   - 副本创建与删除
   - 副本增量与减量
   - 跨路径副本迁移
   - 副本下线与上线
   - 操作最佳实践
 
-- **[07. 分区重分配](./07-reassignment.md)**
+- **[08. 分区重分配](./08-reassignment.md)**
   - 重分配原理
   - kafka-reassign-partitions.sh 使用
   - 重分配限制与限流
   - 跨数据中心重分配
   - 重分配监控与验证
 
-- **[08. 监控指标](./08-replica-monitoring.md)**
+- **[09. 监控指标](./09-replica-monitoring.md)**
   - 副本核心指标
   - ISR 相关指标
   - 同步延迟指标
   - Leader 选举指标
   - 监控告警配置
 
-- **[09. 故障排查](./09-replica-troubleshooting.md)**
+- **[10. 故障排查](./10-replica-troubleshooting.md)**
   - 副本不一致问题
   - ISR 震荡问题
   - Leader 选举失败
@@ -68,7 +76,7 @@
   - 数据丢失与恢复
   - 故障排查工具
 
-- **[10. 配置详解](./10-replica-config.md)**
+- **[11. 配置详解](./11-replica-config.md)**
   - Broker 级别配置
   - Topic 级别配置
   - 性能调优参数
@@ -79,18 +87,19 @@
 
 ### 初学者路径
 1. 阅读 [01. 副本管理概述](./01-replica-overview.md) 了解基本概念
-2. 学习 [05. 副本同步与 ISR](./05-replica-sync.md) 理解同步机制
-3. 查看 [10. 配置详解](./10-replica-config.md) 掌握基础配置
+2. 学习 [06. 副本同步与 ISR](./06-replica-sync.md) 理解同步机制
+3. 查看 [11. 配置详解](./11-replica-config.md) 掌握基础配置
 
 ### 进阶路径
 1. 深入 [02. 分区 Leader 选举](./02-partition-leader.md) 理解选举算法
-2. 研究 [03. 副本拉取机制](./03-replica-fetcher.md) 掌握同步细节
-3. 实践 [07. 分区重分配](./07-reassignment.md) 运维操作
+2. 研究 [04. 副本拉取机制](./04-replica-fetcher.md) 掌握同步细节
+3. 实践 [08. 分区重分配](./08-reassignment.md) 运维操作
 
 ### 专家路径
-1. 精通 [04. 副本状态机](./04-replica-state.md) 源码实现
-2. 掌握 [08. 监控指标](./08-replica-monitoring.md) 建立监控体系
-3. 研究 [09. 故障排查](./09-replica-troubleshooting.md) 处理复杂问题
+1. 精通 [03. 副本同步深度解析](./03-replica-sync-deep-dive.md) 源码实现
+2. 精通 [05. 副本状态机](./05-replica-state.md) 状态管理
+3. 掌握 [09. 监控指标](./09-replica-monitoring.md) 建立监控体系
+4. 研究 [10. 故障排查](./10-replica-troubleshooting.md) 处理复杂问题
 
 ## 核心概念速查
 
@@ -123,9 +132,9 @@ Producer 确认: acks=all 时等待 ISR 确认
 **问题**: Follower 长时间落后 Leader
 
 **排查步骤**:
-1. 检查 [监控指标](./08-replica-monitoring.md)
-2. 查看 [故障排查文档](./09-replica-troubleshooting.md)
-3. 调整 [配置参数](./10-replica-config.md)
+1. 检查 [监控指标](./09-replica-monitoring.md)
+2. 查看 [故障排查文档](./10-replica-troubleshooting.md)
+3. 调整 [配置参数](./11-replica-config.md)
 
 ### 场景 2: Leader 选举频繁
 **问题**: 分区 Leader 频繁切换
@@ -133,13 +142,13 @@ Producer 确认: acks=all 时等待 ISR 确认
 **排查步骤**:
 1. 查看 [Leader 选举机制](./02-partition-leader.md)
 2. 检查 Broker 健康状态
-3. 参考 [故障排查](./09-replica-troubleshooting.md)
+3. 参考 [故障排查](./10-replica-troubleshooting.md)
 
 ### 场景 3: 分区重分配
 **问题**: 需要平衡集群负载
 
 **操作步骤**:
-1. 阅读 [重分配文档](./07-reassignment.md)
+1. 阅读 [重分配文档](./08-reassignment.md)
 2. 生成重分配方案
 3. 执行并监控进度
 

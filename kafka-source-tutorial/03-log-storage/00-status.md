@@ -19,8 +19,7 @@
 ├── 07-log-compaction.md               # 日志压缩详解 ✅
 ├── 08-log-operations.md               # 日志操作命令 ✅
 ├── 09-log-monitoring.md               # 日志监控指标 ✅
-├── 10-log-troubleshooting.md          # 故障排查指南 ✅
-└── 01-log-segment.md (原始文件 - 49KB) # 保留作为参考
+└── 10-log-troubleshooting.md          # 故障排查指南 ✅
 ```
 
 ### 文档统计

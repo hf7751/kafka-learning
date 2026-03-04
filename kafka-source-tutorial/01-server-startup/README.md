@@ -9,33 +9,33 @@
 | 文档 | 内容 | 预计阅读时间 |
 |------|------|-------------|
 | [01-startup-overview.md](./01-startup-overview.md) | 启动流程概述、入口点分析 | 20 分钟 |
-| [01-kafkaserver-startup.md](./01-kafkaserver-startup.md) | KafkaServer 启动流程详解 | 30 分钟 |
-| [11-startup-config.md](./11-startup-config.md) | 启动配置详解 | 25 分钟 |
+| [02-kafkaserver-startup.md](./02-kafkaserver-startup.md) | KafkaServer 启动流程详解 | 30 分钟 |
+| [03-startup-config.md](./03-startup-config.md) | 启动配置详解 | 25 分钟 |
 
 ## 学习路径建议
 
 ### 快速了解 (30分钟)
 ```
 1. 启动流程概述 (01-startup-overview.md)
-2. 启动配置详解 (11-startup-config.md)
+2. 启动配置详解 (03-startup-config.md)
 ```
 
 ### 深入理解 (1小时)
 ```
-1. 启动流程概述
-2. KafkaServer 启动流程
-3. 启动配置详解
+1. 启动流程概述 (01-startup-overview.md)
+2. KafkaServer 启动流程 (02-kafkaserver-startup.md)
+3. 启动配置详解 (03-startup-config.md)
 ```
 
 ## 核心概念速查
 
 | 概念 | 说明 | 相关文档 |
 |------|------|----------|
-| **KafkaRaftServer** | KRaft 模式的服务器入口 | 01-kafkaserver-startup.md |
-| **BrokerServer** | Broker 角色的服务器 | 01-kafkaserver-startup.md |
-| **ControllerServer** | Controller 角色的服务器 | 01-kafkaserver-startup.md |
+| **KafkaRaftServer** | KRaft 模式的服务器入口 | 02-kafkaserver-startup.md |
+| **BrokerServer** | Broker 角色的服务器 | 02-kafkaserver-startup.md |
+| **ControllerServer** | Controller 角色的服务器 | 02-kafkaserver-startup.md |
 | **meta.properties** | 存储节点 ID 和集群 ID 的文件 | 01-startup-overview.md |
-| **process.roles** | 定义节点角色 (broker/controller) | 11-startup-config.md |
+| **process.roles** | 定义节点角色 (broker/controller) | 03-startup-config.md |
 
 ## 启动流程速查
 
@@ -99,7 +99,7 @@
 | `listeners` | - | 监听地址列表 |
 | `inter.broker.listener.name` | - | Broker 间通信监听器 |
 
-更多配置参数请参考：[11-startup-config.md](./11-startup-config.md)
+更多配置参数请参考：[03-startup-config.md](./03-startup-config.md)
 
 ## 版本说明
 

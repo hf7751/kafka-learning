@@ -31,11 +31,16 @@
   - **KRaft 选举机制完整分析**
 
 #### 第二部分：服务端核心机制
-- ✅ **[03. KafkaServer 启动流程详解](./01-server-startup/01-kafkaserver-startup.md)**
+- ✅ **[03. KafkaServer 启动流程详解](./01-server-startup/02-kafkaserver-startup.md)**
   - 完整启动时序图
   - 13个启动阶段详解
   - 组件初始化顺序
   - 状态转换图
+
+- ✅ **[启动配置详解](./01-server-startup/03-startup-config.md)**
+  - 核心配置参数
+  - 配置最佳实践
+  - 性能调优建议
 
 #### 第三部分：请求处理架构
 - ✅ **[04. SocketServer 网络层深度解析](./02-request-processing/01-socketserver.md)** ⭐
@@ -58,7 +63,7 @@
   - 日志清理策略
 
 #### 第五部分：副本管理
-- ✅ **[07. ReplicaManager 副本管理](./04-replica-management/01-replica-manager.md)** ⭐⭐
+- ✅ **[07. ReplicaManager 副本管理](./04-replica-management/03-replica-sync-deep-dive.md)** ⭐⭐
   - ISR 机制详解
   - HW 与 LEO 管理
   - 副本同步流程
@@ -84,15 +89,44 @@
   - 幂等生产者实现
   - 事务状态机
 
+#### 第八部分：Producer 生产者
+- ✅ **[11. Producer 生产者详解](./09-producer/README.md)** ⭐⭐
+  - RecordAccumulator 缓冲区管理
+  - Sender 线程批量发送机制
+  - Metadata 元数据管理
+  - Partitioner 分区器实现
+  - Interceptor 拦截器链
+  - TransactionManager 事务管理
+  - 幂等性与事务支持
+
+#### 第九部分：Consumer 消费者
+- ✅ **[12. Consumer 消费者详解](./10-consumer/README.md)** ⭐⭐
+  - Fetcher 拉取机制详解
+  - ConsumerCoordinator 消费组协调
+  - PartitionAssignor 分区分配策略
+  - Rebalance 重平衡流程
+  - Offset 管理策略
+  - AsyncKafkaConsumer 新版实现
+
+#### 第十部分：网络协议
+- ✅ **[13. Kafka 网络协议详解](./11-network-protocol/README.md)** ⭐⭐
+  - 请求/响应帧格式详解
+  - 消息格式演进 (V0/V1/V2)
+  - 版本协商机制
+  - 序列化机制 (Serializer/Type)
+  - NetworkClient 网络客户端实现
+  - SSL/TLS + SASL 安全协议
+
 ---
 
 ## 📊 教程统计
 
-- **总字数**: 约 150,000+ 字
-- **章节数**: 8 个完整章节
-- **文档数**: 87 个 Markdown 文件
-- **代码示例**: 300+ 段源码分析
-- **流程图**: 70+ 个 Mermaid 图表
+- **总字数**: 约 190,000+ 字
+- **章节数**: 11 个完整章节
+- **文档数**: 98+ 个 Markdown 文件
+- **代码示例**: 500+ 段源码分析
+- **流程图**: 120+ 个 Mermaid 图表
+- **最后更新**: 2026-03-03
 - **核心设计**: 40+ 个设计亮点总结
 
 ## 🏆 Kafka 核心设计亮点

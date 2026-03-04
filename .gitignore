@@ -1,11 +1,19 @@
 # Claude Code 相关文件
 .claude/
+#.qoder 相关文件
+.qoder/
+
 
 # 输出文件和报告
 output/
+plan/
+OPTIMIZATION_SUMMARY.md
 
 # Kafka 源码目录
 kafka/
+
+# 测试目录
+test/
 
 # 脚本文件
 final_check.sh
@@ -17,7 +25,3 @@ final_check.sh
 *~
 .DS_Store
 Thumbs.db
-
-#.qoder 相关文件
-
-.qoder/
