@@ -60,7 +60,7 @@ public final class QuorumController implements Controller {
     private final ClusterControlManager clusterControl;
 
     /**
-     * 分区管理器：管理 Topic、Partition、副本分配
+     * 分区管理器：管理 Topic、 Partition、 副本分配
      */
     private final PartitionReplicationReplicaManager partitionManager;
 

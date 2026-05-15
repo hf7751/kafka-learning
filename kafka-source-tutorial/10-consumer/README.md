@@ -14,6 +14,7 @@
 | [06-offset-management.md](./06-offset-management.md) | Offset 管理策略 | ⭐⭐ |
 | [07-new-consumer.md](./07-new-consumer.md) | 新版 AsyncKafkaConsumer (3.0+) | ⭐⭐⭐ |
 | [08-consumer-config.md](./08-consumer-config.md) | 配置详解 | ⭐ |
+| [09-consumer-practical-guide.md](./09-consumer-practical-guide.md) | 实战指南 | ⭐⭐ |
 
 ## 核心概念速查
 

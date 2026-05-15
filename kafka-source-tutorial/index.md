@@ -4,6 +4,11 @@
 
 ---
 
+## 📖 快速导航
+- [常见问题 FAQ](./FAQ.md) - 快速查找常见问题和解决方案
+
+---
+
 ## 🚀 快速开始
 
 ### 新手入门路径
@@ -158,6 +163,7 @@
 | [06-interceptors.md](09-producer/06-interceptors.md) | 拦截器机制 | ⭐ |
 | [07-transaction-manager.md](09-producer/07-transaction-manager.md) | 事务管理器 | ⭐⭐⭐ |
 | [08-producer-config.md](09-producer/08-producer-config.md) | 配置详解 | ⭐ |
+| [09-producer-practical-guide.md](09-producer/09-producer-practical-guide.md) | 实战指南 | ⭐⭐ |
 
 ### [10. Consumer 消费者](10-consumer/)
 
@@ -171,6 +177,7 @@
 | [06-offset-management.md](10-consumer/06-offset-management.md) | Offset 管理策略 | ⭐⭐ |
 | [07-new-consumer.md](10-consumer/07-new-consumer.md) | 新版 AsyncKafkaConsumer (3.0+) | ⭐⭐⭐ |
 | [08-consumer-config.md](10-consumer/08-consumer-config.md) | 配置详解 | ⭐ |
+| [09-consumer-practical-guide.md](10-consumer/09-consumer-practical-guide.md) | 实战指南 | ⭐⭐ |
 
 ### [11. 网络协议](11-network-protocol/)
 

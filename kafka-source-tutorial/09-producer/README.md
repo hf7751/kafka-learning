@@ -14,6 +14,7 @@
 | [06-interceptors.md](./06-interceptors.md) | 拦截器机制 | ⭐ |
 | [07-transaction-manager.md](./07-transaction-manager.md) | 事务管理器 | ⭐⭐⭐ |
 | [08-producer-config.md](./08-producer-config.md) | 配置详解 | ⭐ |
+| [09-producer-practical-guide.md](./09-producer-practical-guide.md) | 实战指南 | ⭐⭐ |
 
 ## 核心概念速查
 
