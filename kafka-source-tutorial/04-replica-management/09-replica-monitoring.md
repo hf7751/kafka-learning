@@ -212,4 +212,4 @@ scrape_configs:
 
 ---
 
-**下一步**: [09. 故障排查](./09-replica-troubleshooting.md)
+**下一步**: [故障排查](./10-replica-troubleshooting.md)

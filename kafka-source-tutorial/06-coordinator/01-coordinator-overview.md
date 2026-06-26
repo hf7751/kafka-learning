@@ -29,7 +29,7 @@ GroupCoordinator 是 Kafka 服务端（Broker）负责管理消费者组的核�
  *    - 维护消费者组的状态
  *    - 管理组元数据
  *    - 处理状态转换
- * /
+ */
 ```
 
 ### 设计目标
@@ -59,7 +59,7 @@ GroupCoordinator 的设计需要平衡以下目标：
  *    - 支持多种分区分配策略
  *    - 可插拔的协调器接口
  *    - 支持增量 Rebalance
- * /
+ */
 ```
 
 ## 1.2 架构设计
@@ -178,7 +178,7 @@ class GroupCoordinator(
  * - 同一个 Group ID 总是映射到同一个 Coordinator
  * - 通过分区副本机制提供高可用性
  * - 负载均衡分布到多个 Broker
- * /
+ */
 
 // 源码实现
 def coordinatorGroupIdHashOffset(groupId: String): Int = {
@@ -254,7 +254,7 @@ public FindCoordinatorRequest.Builder findCoordinatorRequest =
  *    - 监测心跳超时
  *    - 检测 session 过期
  *    - 移除失效成员
- * /
+ */
 
 case class MemberMetadata(
     memberId: String,                    // 成员唯一标识
@@ -298,7 +298,7 @@ case class MemberMetadata(
  *    - 广播分配方案
  *    - 等待成员确认
  *    - 完成状态转换
- * /
+ */
 
 // 重平衡触发条件
 def tryCompleteRebalance(group: GroupMetadata): Boolean = {
@@ -337,7 +337,7 @@ def tryCompleteRebalance(group: GroupMetadata): Boolean = {
  *    - 检查过期时间
  *    - 清理过期 Offset
  *    - 压缩日志文件
- * /
+ */
 
 // Offset 提交处理
 def handleCommitOffsets(
@@ -392,7 +392,7 @@ def handleCommitOffsets(
  * 8. ListGroups (请求码: 16)
  *    - 列举所有组
  *    - 获取组列表
- * /
+ */
 ```
 
 ### 请求处理流程
@@ -468,7 +468,7 @@ graph LR
  * 3. 副本同步
  *    - 保证数据一致性
  *    - 支持故障恢复
- * /
+ */
 ```
 
 ### 与 ZooKeeper 的关系
@@ -488,7 +488,7 @@ graph LR
  *
  * 注意: Kafka 2.x+ 已经将大部分功能
  * 迁移到内部 Topic，减少 ZK 依赖
- * /
+ */
 ```
 
 ## 1.7 高可用设计
@@ -511,7 +511,7 @@ graph LR
  *    - 从 __consumer_offsets 加载状态
  *    - 重建内存缓存
  *    - 重新开始服务
- * /
+ */
 
 // Group 元数据存储
 case class GroupMetadata(
@@ -584,7 +584,7 @@ sequenceDiagram
  *    - 均匀分布 Group
  *    - 避免 Coordinator 过载
  *    - 支持水平扩展
- * /
+ */
 
 // 心跳处理的快速路径
 def tryCompleteHeartbeat(
@@ -630,7 +630,7 @@ def tryCompleteHeartbeat(
  *    - ZK 写入性能限制
  *    - watch 通知延迟
  *    - 水平扩展困难
- * /
+ */
 ```
 
 ### Kafka 0.9+
@@ -648,7 +648,7 @@ def tryCompleteHeartbeat(
  *    - 支持静态成员
  *    - 支持增量 Rebalance
  *    - 支持更细粒度的控制
- * /
+ */
 ```
 
 ## 1.10 小结

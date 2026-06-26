@@ -1037,4 +1037,4 @@ unclean.leader.election.enable = false
 
 ---
 
-**下一步**: [05. Controller 控制器](../05-controller/01-controller.md)
+**下一步**: [05. Controller 控制器](../05-controller/01-krft-overview.md)

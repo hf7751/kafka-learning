@@ -227,4 +227,4 @@ kafka-topics.sh \
 
 ---
 
-**下一步**: [08. 监控指标](./08-replica-monitoring.md)
+**下一步**: [监控指标](./09-replica-monitoring.md)

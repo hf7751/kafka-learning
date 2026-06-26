@@ -1082,4 +1082,4 @@ request.responseDequeueTimeNanos = time.nanoseconds
 
 ---
 
-**下一步**: [03. 日志存储机制](../03-log-storage/01-log-segment.md)
+**下一步**: [03. 日志存储机制](../03-log-storage/02-log-segment.md)

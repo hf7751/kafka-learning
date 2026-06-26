@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 项目概述
 
-这是一个 Kafka 源码分析教程项目，提供深入浅出的 Kafka 源码解析文档。项目包含 87+ 个 Markdown 文档，涵盖 Kafka 3.x 的核心实现机制。
+这是一个 Kafka 源码分析教程项目，提供深入浅出的 Kafka 源码解析文档。项目包含 87+ 个 Markdown 文档，涵盖 Kafka 4.x 的核心实现机制。
 
 ## 项目结构
 

@@ -56,7 +56,7 @@
   - 认证与授权
 
 #### 第四部分：存储层
-- ✅ **[06. 日志存储机制深度解析](./03-log-storage/01-log-segment.md)** ⭐⭐
+- ✅ **[06. 日志存储机制深度解析](./03-log-storage/02-log-segment.md)** ⭐⭐
   - LogSegment 结构
   - 稀疏索引机制
   - 顺序写 + 零拷贝
@@ -70,20 +70,20 @@
   - Leader 选举
 
 #### 第六部分：控制器与协调器
-- ✅ **[08. Controller 控制器](./05-controller/01-controller.md)** ⭐⭐⭐
+- ✅ **[08. Controller 控制器](./05-controller/01-krft-overview.md)** ⭐⭐⭐
   - KRaft 架构原理
   - QuorumController 实现
   - Raft 协议集成
   - 元数据发布机制
 
-- ✅ **[09. GroupCoordinator 消费者组协调](./06-coordinator/01-group-coordinator.md)** ⭐⭐
+- ✅ **[09. GroupCoordinator 消费者组协调](./06-coordinator/01-coordinator-overview.md)** ⭐⭐
   - Rebalance 完整流程
   - 心跳与会话管理
   - Offset 管理与提交
   - 分区分配策略
 
 #### 第七部分：事务支持
-- ✅ **[10. TransactionCoordinator 事务协调器](./07-transaction/01-transaction-coordinator.md)** ⭐⭐
+- ✅ **[10. TransactionCoordinator 事务协调器](./07-transaction/02-transaction-coordinator.md)** ⭐⭐
   - 两阶段提交协议
   - Transaction Marker 机制
   - 幂等生产者实现

@@ -5,7 +5,7 @@
 本文档详细说明 Kafka 启动相关的配置参数，包括必需配置、可选配置和性能调优配置。
 
 **预计阅读时间**：25 分钟
-**相关文档**：[启动概述](./01-startup-overview.md) | [启动调优](./12-startup-tuning.md)
+**相关文档**：[启动概述](./01-startup-overview.md) | [KafkaServer 启动详解](./02-kafkaserver-startup.md)
 
 ---
 
@@ -598,7 +598,7 @@ ssl.truststore.password=${file:/etc/kafka/truststore.password}
 
 ---
 
-**相关配置**:
-- [性能调优](./12-startup-tuning.md)
-- [故障排查](./10-startup-troubleshooting.md)
-- [操作指南](./09-startup-operations.md)
+**相关内容**:
+- [KafkaServer 启动流程详解](./02-kafkaserver-startup.md)
+- [架构概览](../00-intro/00-architecture-overview.md)
+- [Controller 配置详解](../05-controller/12-configuration.md)

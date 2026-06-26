@@ -1,6 +1,51 @@
-# Kafka 源码分析教程 - 完整索引
+---
+layout: home
 
-> 📚 深入浅出的 Kafka 3.x 源码分析教程，包含 98+ 个文档，涵盖核心实现机制
+hero:
+  name: Kafka 源码分析
+  text: 深入浅出 Kafka 4.x
+  tagline: 从启动流程到事务机制，从存储引擎到网络协议——一份系统、完整的 Kafka 源码学习教程
+  actions:
+    - theme: brand
+      text: 开始阅读
+      link: /00-intro/00-architecture-overview
+    - theme: alt
+      text: 常见问题 FAQ
+      link: /FAQ
+    - theme: alt
+      text: GitHub
+      link: https://github.com/hf7751/kafka-learning
+
+features:
+  - icon: 🚀
+    title: 服务端启动
+    details: KafkaServer 完整启动链路、组件初始化顺序与配置加载机制。
+    link: /01-server-startup/01-startup-overview
+  - icon: 📦
+    title: 日志存储引擎
+    details: LogSegment、索引、追加/读取流程、日志压缩与清理的全景解析。
+    link: /03-log-storage/01-log-overview
+  - icon: 🔄
+    title: 副本与 ISR
+    details: 副本状态机、Leader 选举、HW/LEO 同步、分区重分配。
+    link: /04-replica-management/01-replica-overview
+  - icon: 🧭
+    title: Controller (KRaft)
+    details: KRaft 架构、QuorumController、Raft 协议实现与元数据发布。
+    link: /05-controller/01-krft-overview
+  - icon: ⚖️
+    title: 事务机制
+    details: 两阶段提交、幂等性、TransactionCoordinator 与事务日志。
+    link: /07-transaction/01-transaction-overview
+  - icon: 📡
+    title: 网络协议
+    details: 请求响应格式、消息格式演进、版本协商与 NetworkClient。
+    link: /11-network-protocol/01-protocol-overview
+---
+
+# 完整文档索引
+
+> 📚 深入浅出的 Kafka 4.x 源码分析教程，包含 98+ 个文档，涵盖核心实现机制
 
 ---
 
@@ -91,7 +136,6 @@
 | 文档 | 内容 | 难度 |
 |-----|------|------|
 | [01-krft-overview.md](05-controller/01-krft-overview.md) | KRaft 架构概述 | ⭐⭐ |
-| [01-controller.md](05-controller/01-controller.md) | Controller 控制器详解 | ⭐⭐⭐ |
 | [02-startup-flow.md](05-controller/02-startup-flow.md) | 启动流程 | ⭐⭐ |
 | [03-quorum-controller.md](05-controller/03-quorum-controller.md) | QuorumController 实现 | ⭐⭐⭐ |
 | [04-raft-implementation.md](05-controller/04-raft-implementation.md) | Raft 协议实现 | ⭐⭐⭐ |
@@ -117,7 +161,6 @@
 | 文档 | 内容 | 难度 |
 |-----|------|------|
 | [01-coordinator-overview.md](06-coordinator/01-coordinator-overview.md) | 协调器概述 | ⭐ |
-| [01-group-coordinator.md](06-coordinator/01-group-coordinator.md) | GroupCoordinator 详解 | ⭐⭐⭐ |
 | [02-group-management.md](06-coordinator/02-group-management.md) | 消费组管理 | ⭐⭐ |
 | [03-rebalance-protocol.md](06-coordinator/03-rebalance-protocol.md) | Rebalance 协议 | ⭐⭐⭐ |
 | [04-rebalance-process.md](06-coordinator/04-rebalance-process.md) | Rebalance 流程 | ⭐⭐⭐ |
@@ -268,7 +311,7 @@
 - **代码示例**: 500+ 段
 - **流程图**: 120+ 个
 - **章节数**: 11 个
-- **Kafka 版本**: 3.7.0+
+- **Kafka 版本**: 4.x
 - **最后更新**: 2026-03-03
 
 ---

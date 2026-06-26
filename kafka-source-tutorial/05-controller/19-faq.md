@@ -92,8 +92,9 @@ bin/kafka-storage.sh format \
 # 4. 验证迁移
 bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 
-# 注意: Kafka 3.x 提供了迁移工具
-# bin/kafka-migration-mode.sh --zookeeper.connect localhost:2181
+# 注意: 以上为 Kafka 3.x 的迁移工具
+# bin/kafka-migration-mode.sh 在 Kafka 4.0 已随 ZooKeeper 模式一并移除
+# 若仍在使用 3.x，可借助迁移工具完成 ZK → KRaft 在线迁移
 ```
 
 ### Q5: 如何监控 Raft 协议状态?

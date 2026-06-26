@@ -25,3 +25,8 @@ final_check.sh
 *~
 .DS_Store
 Thumbs.db
+
+# VitePress 依赖与构建产物
+node_modules/
+.vitepress/cache/
+docs/

@@ -1,0 +1,16 @@
+{
+  "name": "kafka-source-tutorial-site",
+  "version": "1.0.0",
+  "description": "Kafka 源码分析教程静态站点 (VitePress + EdgeOne Pages)",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev .",
+    "docs:build": "vitepress build .",
+    "docs:preview": "vitepress preview ."
+  },
+  "devDependencies": {
+    "vitepress": "^1.5.0",
+    "vitepress-plugin-mermaid": "^2.0.17",
+    "mermaid": "^10.9.1"
+  }
+}

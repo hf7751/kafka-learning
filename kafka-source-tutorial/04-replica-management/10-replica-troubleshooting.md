@@ -304,4 +304,4 @@ kafka-metadata-shell --snapshot <metadata-quorum.properties> \
 
 ---
 
-**下一步**: [10. 配置详解](./10-replica-config.md)
+**下一步**: [配置详解](./11-replica-config.md)

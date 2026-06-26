@@ -155,7 +155,7 @@ Controller 核心实现:
 
 ## 版本说明
 
-- **Kafka 版本**: 3.7.0+
+- **Kafka 版本**: 4.x
 - **KRaft 状态**: 生产可用 (Production Ready)
 - **最后更新**: 2026-03-02
 

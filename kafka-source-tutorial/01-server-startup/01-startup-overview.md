@@ -5,7 +5,7 @@
 本文档详细介绍 Kafka Broker 的启动流程概述，帮助读者理解从配置加载到服务就绪的完整过程。
 
 **预计阅读时间**：20 分钟
-**相关文档**：[KafkaServer 初始化](./02-kafkaserver-initialization.md) | [启动配置](./11-startup-config.md)
+**相关文档**：[KafkaServer 启动详解](./02-kafkaserver-startup.md) | [启动配置](./03-startup-config.md)
 
 ---
 
@@ -344,6 +344,6 @@ bin/kafka-server-start.sh --help
 
 ---
 
-**下一节**: [KafkaServer 初始化详解](./02-kafkaserver-initialization.md)
+**下一节**: [KafkaServer 启动流程详解](./02-kafkaserver-startup.md)
 
-**故障排查**: [启动故障排查](./10-startup-troubleshooting.md)
+**故障排查**: 见 [03. 启动配置详解](./03-startup-config.md) 中的故障排查章节

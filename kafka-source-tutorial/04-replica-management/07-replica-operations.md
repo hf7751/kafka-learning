@@ -242,4 +242,4 @@ bin/kafka-server-start.sh config/server.properties
 
 ---
 
-**下一步**: [07. 分区重分配](./07-reassignment.md)
+**下一步**: [分区重分配](./08-reassignment.md)

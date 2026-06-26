@@ -889,7 +889,7 @@ Broker ←→ ZooKeeper
   └─ Broker 通过 Watch 监听变化
 ```
 
-**KRaft 模式 (3.x+)**
+**KRaft 模式 (3.x+，4.0 起为唯一模式)**
 ```
 Broker ←→ Controller Quorum
   ├─ 元数据存储在 __cluster_metadata
@@ -906,12 +906,12 @@ Broker ←→ Controller Quorum
 | 3.1 | 移除部分 ZooKeeper 依赖 |
 | 3.2 | Controller 改进 |
 | 3.3 | 性能优化 |
-| 3.4 | 弃用 ZooKeeper 模式 |
-| 3.5+ | ZooKeeper 模式移除计划 |
+| 3.5 | 弃用 ZooKeeper 模式 |
+| 4.0 | 正式移除 ZooKeeper 模式，KRaft 成为唯一元数据管理方式 |
 
 ### 8.3 新增模块
 
-**3.x 新增的重要模块:**
+**3.x/4.x 新增的重要模块:**
 
 ```
 metadata/          # 元数据管理 (替代部分 ZooKeeper 功能)
@@ -933,7 +933,7 @@ transaction-coordinator/ # 现代化的事务协调器
 scalaVersion=2.13.12
 
 # Kafka 版本
-version=3.7.0-SNAPSHOT
+version=4.0.0-SNAPSHOT
 
 # 依赖版本
 org.slf4j.version=2.0.9

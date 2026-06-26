@@ -19,10 +19,11 @@
 #### 10.1.1 准备工作
 
 ```bash
-# 1. 下载 Kafka
-wget https://downloads.apache.org/kafka/3.7.0/kafka_2.13-3.7.0.tgz
-tar -xzf kafka_2.13-3.7.0.tgz
-cd kafka_2.13-3.7.0
+# 1. 下载 Kafka（请从官网获取最新的 4.x 版本）
+# 下载页: https://kafka.apache.org/downloads
+wget https://downloads.apache.org/kafka/4.0.0/kafka_2.13-4.0.0.tgz
+tar -xzf kafka_2.13-4.0.0.tgz
+cd kafka_2.13-4.0.0
 
 # 2. 生成集群 ID
 KAFKA_CLUSTER_ID="$(bin/kafka-storage.sh random-uuid)"

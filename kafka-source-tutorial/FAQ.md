@@ -151,7 +151,7 @@ unclean.leader.election.enable=false
 详见 [部署指南](./05-controller/08-deployment-guide.md)
 
 ### Q16: 如何从 ZooKeeper 模式迁移到 KRaft 模式？
-**A:** Kafka 3.3+ 支持双向迁移。迁移步骤：
+**A:** Kafka 3.3+ 至 3.x 支持在线双向迁移（Kafka 4.0 已移除 ZooKeeper 模式及迁移工具，需在 3.x 阶段完成迁移）。迁移步骤：
 1. 准备 KRaft Controller 集群
 2. 配置元数据复制
 3. 执行迁移
