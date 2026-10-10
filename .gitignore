@@ -30,3 +30,6 @@ Thumbs.db
 node_modules/
 .vitepress/cache/
 docs/
+
+# AI 工具状态目录
+.workbuddy/
