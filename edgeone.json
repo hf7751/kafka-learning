@@ -1,15 +1,6 @@
-# EdgeOne Pages 部署配置
-# 文档: https://cloud.tencent.com/document/product/1552/127366
-
-[build]
-  # 框架识别：VitePress 静态站点
-  framework = "vitepress"
-
-  # 构建命令
-  command = "npm install && npm run docs:build"
-
-  # 构建产物输出目录（相对于仓库根）
-  output = "docs"
-
-[build.environment]
-  NODE_VERSION = "20"
+{
+  "installCommand": "npm install",
+  "buildCommand": "npm run docs:build",
+  "outputDirectory": "docs",
+  "nodeVersion": "20.18.0"
+}
